@@ -44,7 +44,7 @@ function render(list){
         var a = document.createElement("p");
         c.innerText = "Status: " + v.avail;
 
-        document.createElement("button");
+        var btn1 = document.createElement("button");
         btn1.innerText = "Update Driver";
 
         btn1.addEventListener("click", function(){
@@ -82,5 +82,24 @@ function render(list){
 
 document.getElementById("filterCat").addEventListener("change", applyFilter);
 document.getElementById("filterAvail").addEventListener("change", applyFilter);
+
+function applyFilter(){
+    var fc = Document.getElementById("filterCat").value;
+    var fa = Document.getElementById("filterAvail").value;
+
+    var filtered = vehicles.filter(function(v){
+        var ok1 = fc === "All" || v.cat === fc;
+        var ok2 = fa === "All" || v.avail === fa;
+        return ok1 && ok2;
+
+    });
+    render(filtered);
+}
+
+document.getElementById("clearFilter").addEventListener("click", function(){
+    document.getElementById("FilterCat").value = "All";
+    document.getElementById("FilterAvail").value = "All";
+    render(vehicles);
+});
 
 

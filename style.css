@@ -9,4 +9,44 @@ body{
     margin: 100px auto;
     padding: 20px;
     border: 1px solid black;
+    border-radius: 5px;
 }
+.login-box input, .login-box button{
+    width: 100%;
+    padding: 10px;
+    margin:  8px 0;
+}
+
+#sidebar{
+    width: 250px;
+    background: white;
+    padding: 20px;
+    height: 100vh;
+    position: fixed;
+}
+
+#sidebar input, #sidebar select, #sidebar button{
+    width: 100%;
+    padding: 7px;
+    margin: 7px 0;
+}
+
+#navbar{
+    width: 100%;
+    background: rgb(184, 220, 255);
+    padding: 10px;
+    position: fixed;
+    left: 250px;
+    top: 0;
+}
+
+#content{
+    margin-left: 250px;
+    margin-top: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    gap: 10px;
+}
+
+

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+</head>
+<body>
+    <div class="sidebar">
+        <h3>Add Fleet</h3>
+        <input id = "reg"  type="text" placeholder="Reg No of Vehicle">
+            <select id="cat">
+                <option value="">Select Category</option>
+                <option >Auto</option>
+                <option >Car</option>
+                <option >Truck</option>
+                <option >Bus</option>
+            </select>
+            <input id = "driver" type="text" placeholder="Driver Name">
+                <select id="avail">
+                    <option value="Available">Available</option>
+                    <option value="Unavailable">Unavailable</option>
+                </select>
+                <button id="addBtn">Add Fleet</button>
+    </div>
+
+
+
+    <div id = "navbar">
+        Category:
+        <select id = "filterCat">
+            <option>All</option>
+            <option>Auto</option>
+            <option>Car</option>
+            <option>Truck</option>
+            <option>Bus</option>
+        </select>
+        Availability:
+        <select id = "filterAvail">
+            <option>All</option>
+                <option >Available</option>
+                <option >Unavailable</option>
+        </select>
+
+        <button  id = "clearFilter">Clear Filter</button>
+    </div>
+
+
+
+
+    <div id = "content"></div>
+
+</body>
+</html>
